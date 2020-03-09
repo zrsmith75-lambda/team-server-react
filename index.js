@@ -21,6 +21,10 @@ let books = [
   }
 ];
 
+server.get("/api/books", (req, res) => {
+  res.status(200).json(books);
+});
+
 const PORT = 5632;
 
 server.listen(PORT, () => console.log(`\n server is listening on ${PORT} \n`));
